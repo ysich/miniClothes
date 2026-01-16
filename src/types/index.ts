@@ -111,3 +111,89 @@ export interface Settings {
   /** 最后备份时间 */
   lastBackupTime?: string
 }
+
+/**
+ * uni API 上传文件选项
+ */
+export interface UniUploadFileOptions {
+  /** 上传地址 */
+  url: string
+  /** 要上传文件资源的路径 */
+  filePath: string
+  /** 文件对应的 key */
+  name: string
+  /** 云端文件路径 */
+  cloudPath?: string
+  /** HTTP 请求 Header */
+  header?: Record<string, string>
+  /** HTTP 请求中其他额外的 form data */
+  formData?: Record<string, unknown>
+}
+
+/**
+ * uni API 上传文件结果
+ */
+export interface UniUploadFileResult {
+  /** 服务器返回的数据 */
+  data: string
+  /** 服务器返回的 HTTP 状态码 */
+  statusCode: number
+}
+
+/**
+ * uni API 上传任务
+ */
+export interface UniUploadTask {
+  /** 监听上传进度变化 */
+  onProgressUpdate: (callback: (result: UniUploadProgressUpdateResult) => void) => void
+}
+
+/**
+ * uni API 上传进度更新结果
+ */
+export interface UniUploadProgressUpdateResult {
+  /** 上传进度百分比 */
+  progress: number
+  /** 已经上传的数据长度 */
+  totalBytesSent: number
+  /** 预期需要上传的数据总长度 */
+  totalBytesExpectedToSend: number
+}
+
+/**
+ * uni API 删除文件选项
+ */
+export interface UniDeleteFileOptions {
+  /** 要删除的文件列表 */
+  fileList: Array<{
+    /** 文件ID */
+    fileID?: string
+    /** 云端文件路径 */
+    cloudPath?: string
+  }>
+}
+
+/**
+ * uni API 删除文件结果
+ */
+export interface UniDeleteFileResult {
+  /** 文件删除结果列表 */
+  fileList: Array<{
+    /** 文件ID */
+    fileID?: string
+    /** 云端文件路径 */
+    cloudPath?: string
+    /** 状态码，0表示成功 */
+    status: number
+    /** 错误信息 */
+    errMsg?: string
+  }>
+}
+
+/**
+ * uni API 错误信息
+ */
+export interface UniGeneralError {
+  /** 错误信息 */
+  errMsg: string
+}
