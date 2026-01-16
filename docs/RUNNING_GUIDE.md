@@ -98,22 +98,34 @@ miniClothes/
 
 ## 常见问题
 
-### 问题：小程序运行白屏
+### 问题：npm install TLS/SSL 证书验证警告
 
-**解决方法：**
-1. 检查 HBuilderX 设置 -> 运行设置 -> 重新运行
+这是 Windows 环境下 npm 的 TLS/SSL 证书验证警告，与项目代码无关。
 
-### 问题：图片上传失败
+## 解决方案
 
-**解决方法：**
-1. 检查云存储是否开通
-2. 检查 `CLOUD_ENV_ID` 是否正确
-3. 查看开发者工具 Console 输出
+### 方法一：设置环境变量禁用警告（推荐）
 
-### 问题：数据不保存
+```bash
+set NODE_TLS_REJECT_UNAUTHORIZED=0
+npm install
+```
 
-**检查：**
-- 使用 `uni.getStorageSync('clothing-store')` 查看是否有数据
+### 方法二：忽略警告运行安装
+
+```bash
+npm install --ignore-scripts
+```
+
+### 方法三：使用国内镜像（推荐，更快且避免证书问题）
+
+```bash
+npm install --registry https://registry.npmmirror.com
+```
+
+---
+
+**推荐：** 先尝试方法一（设置环境变量），如果问题依然存在再使用方法三。
 
 ---
 
