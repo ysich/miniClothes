@@ -17,8 +17,9 @@ import type {
 
 /**
  * 云环境ID配置
+ * 小程序环境不支持 process.env，直接使用默认值
  */
-export const CLOUD_ENV_ID = process.env.UNI_CLOUD_ENV_ID || 'default'
+export const CLOUD_ENV_ID = 'default'
 
 /**
  * 云存储上传URL
