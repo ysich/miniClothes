@@ -5,6 +5,25 @@
       "style": {
         "navigationBarTitleText": "我的衣柜"
       }
+    },
+    {
+      "path": "pages/clothing-add/index",
+      "style": {
+        "navigationBarTitleText": "添加衣物"
+      }
+    },
+    {
+      "path": "pages/wardrobe/index",
+      "style": {
+        "navigationBarTitleText": "衣柜",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/clothing-detail/index",
+      "style": {
+        "navigationBarTitleText": "衣物详情"
+      }
     }
   ],
   "globalStyle": {
