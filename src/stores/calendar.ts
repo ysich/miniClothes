@@ -7,6 +7,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import type { CalendarWear } from '@/types'
+import { getTodayDate } from '@/utils/date'
 
 export const useCalendarStore = defineStore(
   'calendar',
@@ -111,14 +112,3 @@ export const useCalendarStore = defineStore(
     },
   }
 )
-
-/**
- * 获取今日日期字符串，格式为 YYYY-MM-DD
- */
-function getTodayDate(): string {
-  const now = new Date()
-  const year = now.getFullYear()
-  const month = (now.getMonth() + 1).toString().padStart(2, '0')
-  const day = now.getDate().toString().padStart(2, '0')
-  return `${year}-${month}-${day}`
-}
