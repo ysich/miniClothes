@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>衣轨 - 图标导出</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+      font-family: sans-serif;
+    }
+    canvas {
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .container {
+      text-align: center;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #C44BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+    button:hover {
+      background: #A832E0;
+    }
+    p {
+      color: #666;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>衣轨 Logo</h2>
+    <p>点击按钮下载 144x144 PNG</p>
+    <canvas id="canvas" width="144" height="144"></canvas>
+    <button onclick="downloadPNG()">下载图标</button>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    // 渐变背景
+    const gradient = ctx.createLinearGradient(0, 0, 144, 144);
+    gradient.addColorStop(0, '#FF6B9D');
+    gradient.addColorStop(1, '#C44BFF');
+
+    // 绘制背景
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.roundRect(8, 8, 128, 128, 28);
+    ctx.fill();
+
+    // 设置白色
+    ctx.fillStyle = 'white';
+    ctx.strokeStyle = 'white';
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+
+    // 衣架顶部圆环
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+    ctx.arc(72, 42, 10, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // 衣架杆
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+    ctx.moveTo(72, 52);
+    ctx.lineTo(72, 62);
+    ctx.stroke();
+
+    // 衣架钩子
+    ctx.beginPath();
+    ctx.moveTo(72, 32);
+    ctx.lineTo(72, 28);
+    ctx.stroke();
+
+    // 衣架主体梯形
+    ctx.beginPath();
+    ctx.moveTo(52, 62);
+    ctx.lineTo(72, 77);
+    ctx.lineTo(92, 62);
+    ctx.stroke();
+
+    // 衣架两侧
+    ctx.lineWidth = 7;
+    ctx.beginPath();
+    ctx.moveTo(52, 62);
+    ctx.lineTo(52, 105);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(92, 62);
+    ctx.lineTo(92, 105);
+    ctx.stroke();
+
+    // 轨道横线
+    ctx.lineWidth = 4;
+    ctx.globalAlpha = 0.4;
+    ctx.beginPath();
+    ctx.moveTo(38, 90);
+    ctx.lineTo(106, 90);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(38, 100);
+    ctx.lineTo(106, 100);
+    ctx.stroke();
+
+    function downloadPNG() {
+      const link = document.createElement('a');
+      link.download = 'yigui-icon-144x144.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C44BFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景圆形 -->
+  <circle cx="256" cy="256" r="240" fill="url(#logoGradient)" />
+
+  <!-- 衣架顶部圆环 -->
+  <circle cx="256" cy="130" r="35" stroke="white" stroke-width="20" fill="none" />
+
+  <!-- 衣架杆 -->
+  <line x1="256" y1="165" x2="256" y2="200" stroke="white" stroke-width="18" stroke-linecap="round" />
+
+  <!-- 衣架钩子 -->
+  <path d="M256 95 L256 60" stroke="white" stroke-width="18" stroke-linecap="round" />
+
+  <!-- 衣架主体梯形 -->
+  <path d="M140 200 L256 260 L372 200" stroke="white" stroke-width="18" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+
+  <!-- 衣架两侧钩子 -->
+  <line x1="140" y1="200" x2="140" y2="380" stroke="white" stroke-width="18" stroke-linecap="round" />
+  <line x1="372" y1="200" x2="372" y2="380" stroke="white" stroke-width="18" stroke-linecap="round" />
+
+  <!-- 轨道线条 (表示"轨"的概念) -->
+  <line x1="90" y1="320" x2="422" y2="320" stroke="rgba(255,255,255,0.5)" stroke-width="8" stroke-linecap="round" stroke-dasharray="20 10" />
+  <line x1="90" y1="350" x2="422" y2="350" stroke="rgba(255,255,255,0.5)" stroke-width="8" stroke-linecap="round" stroke-dasharray="20 10" />
+</svg>

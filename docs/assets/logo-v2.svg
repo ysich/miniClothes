@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4FACFE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00F2FE;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 方形圆角背景 -->
+  <rect x="30" y="30" width="452" height="452" rx="100" fill="url(#logoGradient2)" />
+
+  <!-- 衣架简化版 -->
+  <circle cx="256" cy="140" r="28" fill="white" />
+  <path d="M180 180 L256 220 L332 180" stroke="white" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="180" y1="180" x2="180" y2="360" stroke="white" stroke-width="24" stroke-linecap="round" />
+  <line x1="332" y1="180" x2="332" y2="360" stroke="white" stroke-width="24" stroke-linecap="round" />
+
+  <!-- 轨道横线 -->
+  <line x1="120" y1="310" x2="392" y2="310" stroke="rgba(255,255,255,0.4)" stroke-width="12" stroke-linecap="round" />
+  <line x1="120" y1="345" x2="392" y2="345" stroke="rgba(255,255,255,0.4)" stroke-width="12" stroke-linecap="round" />
+</svg>
