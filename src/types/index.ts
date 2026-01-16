@@ -42,6 +42,8 @@ export interface Clothing {
   images: string[]
   /** 标签数组 */
   tags: string[]
+  /** 状态 */
+  status?: 'active' | 'archived'
   /** 创建时间 */
   createdAt: string
   /** 更新时间 */
