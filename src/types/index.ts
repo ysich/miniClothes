@@ -102,6 +102,21 @@ export interface Category {
 }
 
 /**
+ * 标签类型
+ * 表示衣物标签
+ */
+export interface Tag {
+  /** 标签ID */
+  id: string
+  /** 标签名称 */
+  name: string
+  /** 标签颜色 */
+  color: string
+  /** 排序序号 */
+  order: number
+}
+
+/**
  * 用户设置类型
  * 表示用户的个人设置
  */
@@ -110,6 +125,10 @@ export interface Settings {
   categories: Category[]
   /** 默认分类列表 */
   defaultCategories: Category[]
+  /** 自定义标签列表 */
+  tags: Tag[]
+  /** 默认标签列表 */
+  defaultTags: Tag[]
   /** 最后备份时间 */
   lastBackupTime?: string
 }

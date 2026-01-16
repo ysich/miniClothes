@@ -24,6 +24,42 @@
       "style": {
         "navigationBarTitleText": "衣物详情"
       }
+    },
+    {
+      "path": "pages/outfits/index",
+      "style": {
+        "navigationBarTitleText": "搭配"
+      }
+    },
+    {
+      "path": "pages/outfit-add/index",
+      "style": {
+        "navigationBarTitleText": "创建搭配"
+      }
+    },
+    {
+      "path": "pages/outfit-detail/index",
+      "style": {
+        "navigationBarTitleText": "搭配详情"
+      }
+    },
+    {
+      "path": "pages/settings/index",
+      "style": {
+        "navigationBarTitleText": "设置"
+      }
+    },
+    {
+      "path": "pages/stats/index",
+      "style": {
+        "navigationBarTitleText": "统计"
+      }
+    },
+    {
+      "path": "pages/calendar/index",
+      "style": {
+        "navigationBarTitleText": "日历穿搭"
+      }
     }
   ],
   "globalStyle": {
